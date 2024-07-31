@@ -1,0 +1,33 @@
+body {
+    background-color: #12229d;
+}
+
+h1 {
+    color: white;
+    font-family: Radley;
+}
+
+p {
+    color: white;
+    font-family: Radley;
+}
+
+.image-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.image-links a {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    margin: 10px;
+}
+
+.image-links img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
