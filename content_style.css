@@ -1,0 +1,9 @@
+body {
+    background-image: url('images/room.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #050a30; /* Adjust text color to be visible on the background */
+}
+
+/* Add more styles as needed */
