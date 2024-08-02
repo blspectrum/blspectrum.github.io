@@ -9,7 +9,7 @@
 // });
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('../realityshow_article/realityshow_article1.txt')
+    fetch('realityshow_article/realityshow_article1.txt')
         .then(response => response.text())
         .then(content => {
             document.getElementById('articleContent').innerHTML = content;
