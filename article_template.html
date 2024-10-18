@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article Title - BL Spectrum</title>
     <link rel="stylesheet" href="./content_style.css">
-    <script src="article_script.js" defer></script>
+    <script src="load_article.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,14 +16,15 @@
     </header>
     
     <main>
-        <article>
+        <article id="articleContainer">
+            <div id="loadingIndicator">Loading...</div>
             <h1 id="articleTitle">Article Title</h1>
-            <p class="publication-date">Published on <time datetime="2024-07-31">July 31, 2024</time></p>
+            <p class="publication-date">Published on <time id="publicationDate" datetime="2024-07-31">July 31, 2024</time></p>
             <img id="articleImage" src="" alt="">
             <div id="articleContent"></div>
         </article>
     </main>
-
+    
     <footer>
         <p>&copy; 2024 BL Spectrum. All rights reserved.</p>
     </footer>
