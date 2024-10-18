@@ -1,5 +1,5 @@
 Title: Your Article Title
-Image: article1-image.jpg
+Image: article0-image.jpg
 Date: July 31, 2024
 
 Your article content starts here. You can write multiple paragraphs.

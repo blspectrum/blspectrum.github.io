@@ -20,5 +20,7 @@ I also would like to recommend the first episode as it shows how bright and beau
 It gives of the shy encounter and the observation between each other. If you have watched the show already, I suggest you to watch it again! 
 You get to see how the arrows of the boys point at each other and how it changes through the show <3
 
-Watch it now at nextflix! -> https://www.netflix.com/title/81685212
-Trailer -> https://www.youtube.com/watch?v=VS2gv--0Pug
+<p>Watch it now at <a href="https://www.netflix.com/title/81685212" target="_blank">Netflix!</a></p>
+
+<p>Trailer:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VS2gv--0Pug" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

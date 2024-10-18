@@ -6,4 +6,11 @@ body {
     color: #050a30; /* Adjust text color to be visible on the background */
 }
 
+.text-container {
+    background-color: rgba(255, 255, 255, 0.601); /* White background with 50% opacity */
+    padding: 20px; /* Add some padding for better readability */
+    margin: 20px; /* Optional: space around the text container */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
 /* Add more styles as needed */
