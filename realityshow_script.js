@@ -1,11 +1,46 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     const articleList = document.getElementById('article-list');
+    const newestUpdateSection = document.querySelector('#newest-update article');
     const articles = [
-        { id: 'realityshow_article1', title: 'Top 10 BL Reality Shows of 2024' },
-        { id: 'realityshow_article2', title: 'Behind the Scenes: Making of a BL Reality Show' },
-        { id: 'realityshow_article3', title: 'Interview with BL Reality Show Star' }
+        { id: 'realityshow_article1' },
+        { id: 'realityshow_article2' },
+        { id: 'realityshow_article3' },
+        { id: 'realityshow_article4' },
+        { id: 'realityshow_article5' }
     ];
 
+    for (const article of articles) {
+        try {
+            const response = await fetch(`${article.id}.txt`);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch ${article.id}`);
+            }
+            const text = await response.text();
+            const { title, excerpt } = extractArticleInfo(text);
+            article.title = title;
+            article.excerpt = excerpt;
+        } catch (error) {
+            console.error(error);
+            article.title = 'Article Title Not Available';
+            article.excerpt = 'Excerpt not available.';
+        }
+    }
+
+    // Update the newest article
+    const newestArticle = articles[0]; // Assuming the first article is the newest
+    if (newestUpdateSection) {
+        const newestArticleLink = newestUpdateSection.querySelector('h3 a');
+        const newestArticleExcerpt = newestUpdateSection.querySelector('p');
+        if (newestArticleLink) {
+            newestArticleLink.href = `article_template.html?id=${newestArticle.id}`;
+            newestArticleLink.textContent = newestArticle.title;
+        }
+        if (newestArticleExcerpt) {
+            newestArticleExcerpt.textContent = newestArticle.excerpt;
+        }
+    }
+
+    // Populate the article list
     articles.forEach(article => {
         const li = document.createElement('li');
         const a = document.createElement('a');
@@ -14,12 +49,23 @@ document.addEventListener('DOMContentLoaded', function() {
         li.appendChild(a);
         articleList.appendChild(li);
     });
-
-    // Update the newest article link
-    const newestArticle = articles[0]; // Assuming the first article is the newest
-    const newestArticleLink = document.querySelector('#newest-update h3 a');
-    if (newestArticleLink) {
-        newestArticleLink.href = `article_template.html?id=${newestArticle.id}`;
-        newestArticleLink.textContent = newestArticle.title;
-    }
 });
+
+function extractArticleInfo(text) {
+    const lines = text.split('\n');
+    let title = 'Untitled Article';
+    let excerpt = 'No excerpt available.';
+
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (line.startsWith('Title:')) {
+            title = line.substring(6).trim();
+        } else if (line === '') {
+            // Assume the first non-empty line after a blank line is the start of the content
+            excerpt = lines[i + 1] ? lines[i + 1].trim() : excerpt;
+            break;
+        }
+    }
+
+    return { title, excerpt };
+}
