@@ -18,5 +18,6 @@ img {
     height: auto; /* Maintains the aspect ratio */
     display: block; /* Removes bottom space in inline images */
     margin: 0 auto; /* Centers the image if it's smaller than the container */
+    float: left; /* Aligns the image to the left */
 }
 /* Add more styles as needed */
