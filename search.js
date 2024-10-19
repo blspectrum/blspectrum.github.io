@@ -292,5 +292,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Filter articles based on the query
         filterArticles(query); // Use the query to filter articles
     }
+    console.log(articles); // Debugging line
 });
 

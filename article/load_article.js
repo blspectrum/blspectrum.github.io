@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = urlParams.get('id');
 
+     // Debugging line to check the value of articleId
+     console.log("Article ID:", articleId); 
+     
     if (articleId) {
         loadArticle(articleId);
     } else {
@@ -46,6 +49,7 @@ async function loadArticle(articleId) {
     } catch (error) {
         displayError(error.message);
     }
+
 }
 
 function parseArticleText(text) {
