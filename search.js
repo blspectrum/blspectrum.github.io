@@ -4,7 +4,7 @@ async function loadArticles() {
     // Load your articles here, populating the global `articles` array.
     try {
         // Assuming you still want to use text files
-        const response = await fetch('realityshow_article/'); // Update this to the correct path
+        const response = await fetch(`../realityshow_article/${articleId}.txt`)
         const articleIds = await response.text(); // Assuming this fetches a list of article IDs
 
         // Load each article based on the IDs
