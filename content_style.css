@@ -32,7 +32,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f4f6fc;
+    background-color: transparent; /* No background */
 }
 
 nav a {
@@ -51,6 +51,7 @@ nav a:hover {
 .search-container {
     display: flex;
     justify-content: flex-end; /* Aligns the search bar to the right */
+    background-color: transparent; /* No background */
 }
 
 input[type="text"] {
