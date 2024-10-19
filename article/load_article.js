@@ -25,6 +25,13 @@ async function loadArticle(articleId) {
         
         const articleText = await response.text();
         const articleData = parseArticleText(articleText);
+
+        // Store article data in the global array
+        articles.push({
+            id: articleId,
+            title: articleData.title,
+            content: articleData.content
+        });
         
         document.title = `${articleData.title} - BL Spectrum`;
         document.getElementById('articleTitle').textContent = articleData.title;
