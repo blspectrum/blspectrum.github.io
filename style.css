@@ -4,12 +4,12 @@ body {
 }
 
 h1 {
-    color: white;
+    color: #f4f6fc;
     font-family: Radley;
 }
 
 p {
-    color: white;
+    color: #f4f6fc;
     font-family: Radley;
 }
 
@@ -21,7 +21,7 @@ p {
 
 .image-links a {
     text-decoration: none;
-    color: #000;
+    color: #050a30;
     text-align: center;
     margin: 10px;
 }

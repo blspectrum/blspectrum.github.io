@@ -32,13 +32,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f4f6fc;
 }
 
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #007BFF;
+    color: #050a30;
     transition: background-color 0.3s; /* Smooth transition */
 }
 
@@ -56,7 +56,7 @@ nav a:hover {
 input[type="text"] {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #f4f6fc;
     border-radius: 4px;
     width: 250px;
     max-width: 100%; /* Responsive */
@@ -66,19 +66,19 @@ button {
     padding: 10px;
     font-size: 16px;
     border: none;
-    background-color: #007BFF;
-    color: white;
+    background-color: #050a30;
+    color: #f4f6fc;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s; /* Smooth transition */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color:  #050a30;
 }
 
 button:focus {
-    outline: 2px solid #0056b3; /* Outline on focus */
+    outline: 2px solid #050a30; /* Outline on focus */
 }
 
 @media (max-width: 768px) {
