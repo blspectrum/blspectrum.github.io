@@ -1,21 +1,15 @@
 let articles = []; // Ensure this is defined globally
 
-async function loadArticles() {
-    // Load your articles here, populating the global `articles` array.
+async function loadArticles(category) {
     try {
-        // Assuming you still want to use text files
-        const response = await fetch(`../realityshow_article/${articleId}.txt`)
-        const articleIds = await response.text(); // Assuming this fetches a list of article IDs
-
-        // Load each article based on the IDs
-        for (const articleId of articleIds.split('\n')) {
-            await loadArticle(articleId.trim()); // Load each article and store in the global array
-        }
+        const response = await fetch(`../articles/${category}_articles.json`);
+        const articles = await response.json();
+        console.log('Articles loaded:', articles);
+        return articles;
     } catch (error) {
         console.error('Error loading articles:', error);
     }
 }
-
 function filterArticles(query) {
     const filter = query.toLowerCase();
     const filteredArticles = articles.filter(article => 
