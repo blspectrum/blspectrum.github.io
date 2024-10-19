@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         const newestArticleLink = newestUpdateSection.querySelector('h3 a');
         const newestArticleExcerpt = newestUpdateSection.querySelector('p');
         if (newestArticleLink) {
-            newestArticleLink.href = `article_template.html?id=${newestArticle.id}`;
+            newestArticleLink.href = `article/article_template.html?id=${newestArticle.id}`;
             newestArticleLink.textContent = newestArticle.title;
         }
         if (newestArticleExcerpt) {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     articles.forEach(article => {
         const li = document.createElement('li');
         const a = document.createElement('a');
-        a.href = `article_template.html?id=${article.id}`;
+        a.href = `article/article_template.html?id=${article.id}`;
         a.textContent = article.title;
         li.appendChild(a);
         articleList.appendChild(li);
