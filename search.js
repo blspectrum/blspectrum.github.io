@@ -228,9 +228,14 @@
 // });
 // /////////////
 
-let articles = []; // Ensure this is defined globally
+// let articles = []; // Ensure this is defined globally
+const myApp = {
+    articles: [] // Define articles here
+};
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
+    await loadArticles(); // Ensure this function populates myApp.articles
+
     const searchInput = document.getElementById('search');
 
     function filterArticles(query) {
