@@ -17,7 +17,7 @@ img {
     max-width: 50%; /* Ensures the image doesn't exceed the width of its container */
     height: auto; /* Maintains the aspect ratio */
     display: block; /* Removes bottom space in inline images */
-    /* margin: 0 auto; /* Centers the image if it's smaller than the container */
-    float: left; /* Aligns the image to the left */
+    margin: 0 auto; /* Centers the image if it's smaller than the container */
+    /* float: left; /* Aligns the image to the left */
 }
 /* Add more styles as needed */
