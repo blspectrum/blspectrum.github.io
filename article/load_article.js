@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = urlParams.get('id');
+    const query = urlParams.get('query'); // Get the search query
 
      // Debugging line to check the value of articleId
      console.log("Article ID:", articleId); 
@@ -9,6 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         loadArticle(articleId);
     } else {
         displayError("No article ID specified");
+    }
+
+    if (query) {
+        // Load or filter articles based on the query
+        filterArticles(query); // Make sure this function is defined to handle the filtering
     }
 });
 

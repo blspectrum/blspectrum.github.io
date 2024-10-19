@@ -297,6 +297,39 @@ document.addEventListener('DOMContentLoaded', async function() {
         // Filter articles based on the query
         filterArticles(query); // Use the query to filter articles
     }
+
+    // Function to filter articles
+    function filterArticles(query) {
+        const filter = query.toLowerCase();
+        const filteredArticles = articles.filter(article => 
+            article.title.toLowerCase().includes(filter) || 
+            article.content.toLowerCase().includes(filter)
+        );
+
+        displayFilteredArticles(filteredArticles);
+    }
+
+    // Function to display filtered articles
+    function displayFilteredArticles(filteredArticles) {
+        const articleContainer = document.getElementById('articleContainer');
+        articleContainer.innerHTML = ''; // Clear current articles
+
+        if (filteredArticles.length === 0) {
+            articleContainer.innerHTML = '<p>No articles found.</p>';
+            return;
+        }
+
+        // Display filtered articles
+        filteredArticles.forEach(article => {
+            const h1 = document.createElement('h1');
+            h1.textContent = article.title;
+            const p = document.createElement('p');
+            p.innerHTML = article.content; // Display content
+            articleContainer.appendChild(h1);
+            articleContainer.appendChild(p);
+        });
+    }
+
     console.log(articles); // Debugging line
 });
 
