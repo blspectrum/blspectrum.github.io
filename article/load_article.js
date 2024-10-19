@@ -16,7 +16,7 @@ async function loadArticle(articleId) {
     try {
         loadingIndicator.style.display = 'block';
         
-        const response = await fetch(`./realityshow_article/realityshow_${articleId}.txt`);
+        const response = await fetch(`../realityshow_article/${articleId}.txt`);
         if (!response.ok) {
             throw new Error('Article not found');
         }
