@@ -1,12 +1,10 @@
-// article/load_article.js
-
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', async() => {
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = urlParams.get('id');
     const query = urlParams.get('query'); // Get the search query
 
      // Debugging line to check the value of articleId
-     console.log("Article ID:", articleId); 
+    console.log("Article ID:", articleId); 
 
     if (articleId) {
         await loadArticle(articleId);

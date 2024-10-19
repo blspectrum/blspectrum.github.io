@@ -1,0 +1,28 @@
+[
+    {
+        "id": "realityshow_article1",
+        "title": "The Boyfriend",
+        "image": "../images/realityshow/article1-image.jpg",
+        "date": "2024-10-18",
+        "content": {
+            "introduction": "The Boyfriend on Netflix became a hit in multiple countries, bringing a new wave in Japan's dating reality shows. The program captures the love and friendships between the boys who spend the summer operating a coffee truck. With beautiful sceneries and summer vibe songs, the content is made to be like a movie full of memories.",
+            "expectations": {
+                "heading": "What to expect:",
+                "text": "One thing viewers can expect is the various shapes of love. One-sided love, mutual crushes, and even a love triangle appear in the show. Their feelings and relationships change over time with many events awaiting for them. Especially, the love story of Shun, an artist who grew up in the orphanage, draws attention in the show. The show is not only a love story but also a human documentary, showcasing the boys' growth influenced by each other's thinking and actions."
+            },
+            "episodes": {
+                "heading": "Which Episodes?",
+                "text": "There are several hot moments throughout the show including heart-fluttering moments and heat-up moments. Everyone will agree the end of episode 8 is wonderful (I am not going to further comment on this, check it out yourself!) I also would like to recommend the first episode as it shows how bright and beautiful the vibes are. It gives off the shy encounter and the observation between each other. If you have watched the show already, I suggest you watch it again! You get to see how the arrows of the boys point at each other and how it changes through the show <3"
+            },
+            "callToAction": "<p>Watch it now at <a href='https://www.netflix.com/title/81685212' target='_blank'>Netflix!</a></p>",
+            "videoEmbed": "<div class='video-container'><iframe width='560' height='315' src='https://www.youtube.com/embed/VS2gv--0Pug' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>"
+        }
+    },
+    {
+        "id": "realityshow_article2",
+        "title": "Reality Show Article 2",
+        "image": "image2.jpg",
+        "date": "2024-01-02",
+        "content": "Content of reality show article 2."
+    }
+]
