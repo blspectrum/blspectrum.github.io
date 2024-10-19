@@ -156,6 +156,78 @@
     
 // });
 
+// let articles = []; // Ensure this is defined globally
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const searchInput = document.getElementById('search');
+
+//     function filterArticles(query) {
+//         const filter = query.toLowerCase();
+
+//         // Filter articles based on title or content
+//         const filteredArticles = articles.filter(article => 
+//             article.title.toLowerCase().includes(filter) || 
+//             article.content.toLowerCase().includes(filter)
+//         );
+
+//         // Update the display based on filtered articles
+//         displayFilteredArticles(filteredArticles);
+//     }
+
+//     function displayFilteredArticles(filteredArticles) {
+//         const articleContainer = document.getElementById('articleContainer');
+//         articleContainer.innerHTML = ''; // Clear current articles
+
+//         if (filteredArticles.length === 0) {
+//             articleContainer.innerHTML = '<p>No articles found.</p>';
+//             return;
+//         }
+
+//         // Display filtered articles
+//         filteredArticles.forEach(article => {
+//             const h1 = document.createElement('h1');
+//             h1.textContent = article.title;
+//             const p = document.createElement('p');
+//             p.innerHTML = article.content; // Display content
+//             articleContainer.appendChild(h1);
+//             articleContainer.appendChild(p);
+//         });
+//     }
+
+//     // Search on input
+//     searchInput.addEventListener('input', function() {
+//         filterArticles(searchInput.value);
+//     });
+
+//     // Trigger search on Enter key press
+//     searchInput.addEventListener('keypress', function(event) {
+//         if (event.key === 'Enter') {
+//             performSearch(); // Call your search function
+//         }
+//     });
+
+//     // Expose performSearch function to the global scope
+//     window.performSearch = function() {
+//         const query = searchInput.value;
+//         if (query) {
+//             const searchUrl = `search.html?query=${encodeURIComponent(query)}`;
+//             window.location.href = searchUrl; // Redirect to search.html
+//         }
+//     };
+
+//     // Check for query in the URL when on search.html
+//     if (window.location.pathname.endsWith('search.html')) {
+//         const urlParams = new URLSearchParams(window.location.search);
+//         const query = urlParams.get('query');
+        
+//         if (query) {
+//             // Call the filter function with the query
+//             filterArticles(query);
+//         }
+//     }
+// });
+// /////////////
+
 let articles = []; // Ensure this is defined globally
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -194,12 +266,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Search on input
     searchInput.addEventListener('input', function() {
         filterArticles(searchInput.value);
     });
 
-    // Expose performSearch function to the global scope
+    searchInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            performSearch(); // Call your search function
+        }
+    });
+
     window.performSearch = function() {
         const query = searchInput.value;
         if (query) {
@@ -208,14 +284,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Check for query in the URL when on search.html
-    if (window.location.pathname.endsWith('search.html')) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const query = urlParams.get('query');
-        
-        if (query) {
-            // Call the filter function with the query
-            filterArticles(query);
-        }
+    // Check for query parameters on page load
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query');
+
+    if (query) {
+        // Filter articles based on the query
+        filterArticles(query); // Use the query to filter articles
     }
 });
+
