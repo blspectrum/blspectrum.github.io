@@ -22,7 +22,6 @@ You get to see how the arrows of the boys point at each other and how it changes
 
 <p>Watch it now at <a href="https://www.netflix.com/title/81685212" target="_blank">Netflix!</a></p>
 
-<p>Trailer:</p>
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/VS2gv--0Pug" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

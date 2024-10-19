@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     for (const article of articles) {
         try {
-            const response = await fetch(`${article.id}.txt`);
+            const response = await fetch(`realityshow_article/${article.id}.txt`);
             if (!response.ok) {
                 throw new Error(`Failed to fetch ${article.id}`);
             }

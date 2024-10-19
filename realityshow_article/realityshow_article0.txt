@@ -7,3 +7,5 @@ Your article content starts here. You can write multiple paragraphs.
 You can use basic HTML tags in your content if needed, like <strong>bold text</strong> or <em>italic text</em>.
 
 Remember to separate paragraphs with blank lines for readability.
+
+Use <div class="video-container"></div> for setting a video in the center of the page.
