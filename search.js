@@ -228,10 +228,10 @@
 // });
 // /////////////
 
-// let articles = []; // Ensure this is defined globally
-const myApp = {
-    articles: [] // Define articles here
-};
+let articles = []; // Ensure this is defined globally
+// const myApp = {
+//     articles: [] // Define articles here
+// };
 
 document.addEventListener('DOMContentLoaded', async function() {
     await loadArticles(); // Ensure this function populates myApp.articles
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             return;
         }
 
-        // Display filtered articles
+        // Display filtered articles 
         filteredArticles.forEach(article => {
             const h1 = document.createElement('h1');
             h1.textContent = article.title;
