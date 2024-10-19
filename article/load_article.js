@@ -1,3 +1,5 @@
+// article/load_article.js
+
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = urlParams.get('id');

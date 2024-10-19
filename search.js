@@ -3,8 +3,14 @@ let articles = []; // Ensure this is defined globally
 async function loadArticles() {
     // Load your articles here, populating the global `articles` array.
     try {
-        const response = await fetch('../articles_list.json'); // Update the path as necessary
-        articles = await response.json();
+        // Assuming you still want to use text files
+        const response = await fetch('realityshow_article/'); // Update this to the correct path
+        const articleIds = await response.text(); // Assuming this fetches a list of article IDs
+
+        // Load each article based on the IDs
+        for (const articleId of articleIds.split('\n')) {
+            await loadArticle(articleId.trim()); // Load each article and store in the global array
+        }
     } catch (error) {
         console.error('Error loading articles:', error);
     }
