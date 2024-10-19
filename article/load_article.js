@@ -1,3 +1,5 @@
+let articles = []; // Global array to store article titles
+
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = urlParams.get('id');
