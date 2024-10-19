@@ -50,6 +50,7 @@ nav a:hover {
 
 .search-container {
     display: flex;
+    justify-content: flex-end; /* Aligns the search bar to the right */
 }
 
 input[type="text"] {
