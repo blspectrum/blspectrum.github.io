@@ -234,9 +234,9 @@ let articles = []; // Ensure this is defined globally
 // };
 
 document.addEventListener('DOMContentLoaded', async function() {
-    await loadArticles(); // Ensure this function populates myApp.articles
-
     const searchInput = document.getElementById('search');
+
+    await loadArticles(); /// Load all articles on page load
 
     function filterArticles(query) {
         const filter = query.toLowerCase();

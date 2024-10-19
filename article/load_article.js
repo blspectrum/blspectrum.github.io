@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = urlParams.get('id');
     const query = urlParams.get('query'); // Get the search query
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
      console.log("Article ID:", articleId); 
 
     if (articleId) {
-        loadArticle(articleId);
+        await loadArticle(articleId);
     } else {
         displayError("No article ID specified");
     }
