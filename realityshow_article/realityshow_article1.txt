@@ -1,5 +1,5 @@
 Title: "The Boyfriend" Japan's First Dating Reality Show Between Men
-Image: images/realityshow/article1-image.jpg
+Image: ../images/realityshow/article1-image.jpg
 Date: October 18, 2024
 
 "The Boyfriend" on netflix became a hit in multiple countries, bringing a new wave in Japan's dating reality show. 
