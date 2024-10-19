@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BL Spectrum - Reality Shows</title>
     <link rel="stylesheet" href="./content_style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png">  <!-- favicon -->
+    <link rel="icon" href="images/logo/favicon3.png" type="image/png">  <!-- favicon -->
     <script src="realityshow_script.js" defer></script>
 </head>
 <body>
     <header>
+        <h1 class="header-title">Reality Shows</h1>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.html">Home</a></nav>
             <a href="realityshow.html">Reality Shows</a>
             <a href="novels.html">Novels</a>
             <a href="fanfiction.html">Fanfiction</a>
         </nav>
-        <h1>Reality Shows</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search..." />
+            <button onclick="performSearch()">Search</button>
+        </div>
     </header>
     
     <main>
